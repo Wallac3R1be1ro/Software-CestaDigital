@@ -1,0 +1,24 @@
+{
+  "name": "software-cestadigital",
+  "version": "1.0.0",
+  "description": "Software PDV destinado para a venda de produtos de mercado.",
+  "homepage": "https://github.com/Wallac3R1be1ro/Software-CestaDigital#readme",
+  "bugs": {
+    "url": "https://github.com/Wallac3R1be1ro/Software-CestaDigital/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wallac3R1be1ro/Software-CestaDigital.git"
+  },
+  "license": "MIT",
+  "author": "Wallace R.",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^40.7.0"
+  }
+}
