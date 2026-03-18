@@ -15,6 +15,25 @@
     <link rel="stylesheet" href="../public/css/style.css">
 </head>
 <body>
+  <form class="FormProd" method="get">
+    <p>Adicionar CPF na Nota:  <input type="addCPF" id="addCPF" name="addCPF" maxlength="11"><br></p>
+    <p>Adicionar produto: <input type="text" id="nomeProd" name="nomeProd" placeholder="Digite o produto" required><br></p>
+    <p>Adicionar quantidade: <input type="number" id="addQtd" name="addQtd" min="1" max="100" required><br></p>
+
+    <!-- Botão de envio -->
+    <button type="submit">Adicionar ao Carrinho</button><br>
+    <button type="reset">Resetar Campos</button>
+    <button type="button" id="btnImprimir">Imprimir</button>
+  </form>
+  <nav>
     <a href="../views/index.html"><button>Voltar</button></a>
+  </nav>
+  <!--Area de impressão Recibo-->
+  <div class="area-impressao">
+    <img src="../public/img/fundo.jpg" class="logo-recibo">
+    <div id="cliente"></div>
+    <div class="recibo"></div>
+  </div>
+  <script src="../public/js/app.js"></script>
 </body>
 </html>

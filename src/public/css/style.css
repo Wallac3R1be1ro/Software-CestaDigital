@@ -13,6 +13,12 @@ body , html {
     background-position: center; /* Centraliza a imagem */
     /*background-repeat: no-repeat;*/
 }
+a{
+    text-decoration: none;
+}
+.logo-recibo{
+    display: none;
+}
 
 button{
     background-color: #FBC02D;
@@ -64,4 +70,42 @@ section{
     font-weight: bold;
     color: #fff;
     text-align: center;
+}
+
+@page {
+  size: 80mm auto;
+  margin: 5mm;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .area-impressao, .area-impressao * {
+    visibility: visible;
+  }
+
+  .area-impressao {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80mm;
+    font-family: monospace;
+    font-size: 12px;
+  }
+   .logo-recibo {
+        width: 80px;
+        display: block;
+        margin: 0 auto;
+    }
+
+  .linha {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact;
+  }
 }
