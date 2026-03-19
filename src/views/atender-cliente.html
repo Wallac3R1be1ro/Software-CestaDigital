@@ -15,25 +15,33 @@
     <link rel="stylesheet" href="../public/css/style.css">
 </head>
 <body>
-  <form class="FormProd" method="get">
-    <p>Adicionar CPF na Nota:  <input type="addCPF" id="addCPF" name="addCPF" maxlength="11"><br></p>
-    <p>Adicionar produto: <input type="text" id="nomeProd" name="nomeProd" placeholder="Digite o produto" required><br></p>
-    <p>Adicionar quantidade: <input type="number" id="addQtd" name="addQtd" min="1" max="100" required><br></p>
+  <section>
+    <div class="container">
+      <header>
+        <h1>CESTA DIGITAL</h1>
+      </header>
+      <form class="FormProd" method="get">
+        <p>Adicionar CPF na Nota:  <input type="addCPF" id="addCPF" name="addCPF" maxlength="11"><br></p>
+        <p>Adicionar produto: <input type="text" id="nomeProd" name="nomeProd" placeholder="Digite o produto" required><br></p>
+        <p>Adicionar quantidade: <input type="number" id="addQtd" name="addQtd" min="1" max="100" required><br></p>
 
-    <!-- Botão de envio -->
-    <button type="submit">Adicionar ao Carrinho</button><br>
-    <button type="reset">Resetar Campos</button>
-    <button type="button" id="btnImprimir">Imprimir</button>
-  </form>
-  <nav>
-    <a href="../views/index.html"><button>Voltar</button></a>
-  </nav>
+        <!-- Botão de envio -->
+        <button type="submit"><i>Adicionar ao Carrinho</i></button>
+        <button type="reset"><i>Resetar Campos</i></button>
+        <button type="button" id="btnImprimir"><i>Imprimir</i></button>
+    </form>
+    <nav>
+      <a href="../views/index.html"><button><i>Voltar</i></button></a>
+    </nav>
   <!--Area de impressão Recibo-->
-  <div class="area-impressao">
-    <img src="../public/img/fundo.jpg" class="logo-recibo">
-    <div id="cliente"></div>
-    <div class="recibo"></div>
-  </div>
+      <div class="area-impressao">
+        <img src="../public/img/fundo.jpg" class="logo-recibo">
+        <div id="cliente"></div>
+        <div class="recibo"></div>
+      </div>
+    </div>
+  </section>
+
   <script src="../public/js/app.js"></script>
 </body>
 </html>

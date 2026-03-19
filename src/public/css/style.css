@@ -72,6 +72,24 @@ section{
     text-align: center;
 }
 
+.FormProd{
+    text-align: left;
+}
+.FormProd, input{
+    margin-bottom: 10px;
+}
+.area-impressao{
+    background-color: rgb(95, 95, 86);
+    color: #000;
+}
+.area-impressao{
+    width: 300px;           /* Largura opcional */
+    height: 100px;          /* ALTURA FIXA: Essencial para o scroll */
+    overflow-y: auto;       /* Cria scroll vertical apenas quando necessário */
+    border: 5px solid #FBC02D; /* Opcional: para enxergar a div */
+    padding: 10px;          /* Opcional */
+}
+
 @page {
   size: 80mm auto;
   margin: 5mm;
