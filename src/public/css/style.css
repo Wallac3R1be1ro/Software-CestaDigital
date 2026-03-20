@@ -59,6 +59,9 @@ section{
     border: solid 6px #D32F2F;
     padding: 2.5rem; /*Permite um espaçamento melhor sobre os itens*/
     border-radius: 15px;
+    width: 450px;           /* Largura opcional */
+    height: 300px;          /* ALTURA FIXA: Essencial para o scroll */
+    overflow-y: auto;  
 }
 
 .container header{
@@ -84,7 +87,7 @@ section{
 }
 .area-impressao{
     width: 300px;           /* Largura opcional */
-    height: 100px;          /* ALTURA FIXA: Essencial para o scroll */
+    height: 200px;          /* ALTURA FIXA: Essencial para o scroll */
     overflow-y: auto;       /* Cria scroll vertical apenas quando necessário */
     border: 5px solid #FBC02D; /* Opcional: para enxergar a div */
     padding: 10px;          /* Opcional */
