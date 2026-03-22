@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../../server.js"></script>
+</head>
+<body>
+    <input type="text" id="codigo" placeholder="Código do produto">
+    <button onclick="buscarProduto()">Buscar</button>
+
+    <p id="nomeProduto"></p>
+
+<script>
+  async function buscarProduto() {
+  const codigo = document.getElementById('codigo').value;
+
+  const response = await fetch(`http://localhost:3000/produto/${codigo}`);
+  const data = await response.json();
+
+  document.getElementById('nomeProduto').innerText =
+  `${data.nome_produto} - R$ ${data.valor_produto / 100} (${data.marca})`;
+}
+</script>
+</body>
+</html>
