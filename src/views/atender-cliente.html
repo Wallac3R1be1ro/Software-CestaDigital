@@ -3,14 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
-    <meta
-      http-equiv="X-Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
     <title>Cesta Digital</title>
     <link rel="stylesheet" href="../public/css/style.css">
 </head>
@@ -20,28 +12,51 @@
       <header>
         <h1>CESTA DIGITAL</h1>
       </header>
-      <form class="FormProd" method="get">
+      <form class="cpf" method="get">
         <p>Adicionar CPF na Nota:  <input type="addCPF" id="addCPF" name="addCPF" maxlength="11"><br></p>
-        <p>Adicionar produto: <input type="text" id="nomeProd" name="nomeProd" placeholder="Digite o produto" required><br></p>
-        <p>Adicionar quantidade: <input type="number" id="addQtd" name="addQtd" min="1" max="100" required><br></p>
-
-        <!-- Botão de envio -->
-        <button type="submit"><i>Adicionar ao Carrinho</i></button>
-        <button type="reset"><i>Resetar Campos</i></button>
+        <button type="submit"><i>Adicionar CPF</i></button>
+      </form>
+      <div class="FormProd">
+        <p>Adicionar código: <input type="number" id="codigo" placeholder="Código do produto"></p>
+        <button onclick="buscarProduto()"><i>Adicionar Produto</i></button>
         <button type="button" id="btnImprimir"><i>Imprimir</i></button>
-    </form>
-    <nav>
-      <a href="../views/index.html"><button><i>Voltar</i></button></a>
-    </nav>
+      </div>
+      <nav>
+        <a href="../views/index.html"><button><i>Voltar</i></button></a>
+      </nav>
+
   <!--Area de impressão Recibo-->
       <div class="area-impressao">
-        <img src="../public/img/fundo.jpg" class="logo-recibo">
-        <div id="cliente"></div>
-        <div class="recibo"></div>
+        <!--<img src="../public/img/fundo.jpg" class="logo-recibo">-->
+        <div class="info">
+          <h2>Mercado Dia</h2>
+          <p>RUA SANTA FILOMENA, 925, Centro, SBC - SP</p>
+          <p>_______________________________</p>
+          <h3>DANFE NFC-e</h3>
+          <p>Documento Auxiliar de Nota Fiscal do Consumidor Eletrônica</p>
+          <p>Não permite aproveitamento de crédito do ICMS</p>
+          <p>_______________________________</p>
+          <p>Descrição:</p>
+        </div>
+        <div class="recibo">
+          <ul id="listaProdutos" class="listaProdutos"></ul>
+          <div class="info"><p>_______________________________</p></div>
+          <h3>Total: R$ <span id="total">0.00</span></h3>
+        </div>
+        <div class="info"><p>_______________________________</p></div>
+        <div id="cliente" class="cliente"></div>
       </div>
     </div>
   </section>
-
-  <script src="../public/js/app.js"></script>
+  <!--Link JS-->
+  <script src="../public/js/func_cpf.js"></script>
+  <script src="../public/js/cod_produto.js"></script>
+  <!--Script de função de imprimir-->
+  <script>
+    function imprimirRecibo(){
+    window.print();
+  }
+  document.querySelector('#btnImprimir').addEventListener('click', imprimirRecibo);
+  </script>
 </body>
 </html>

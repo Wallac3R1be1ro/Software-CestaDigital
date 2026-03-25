@@ -13,8 +13,9 @@ body , html {
     background-position: center; /* Centraliza a imagem */
     /*background-repeat: no-repeat;*/
 }
-a{
+a, ul{
     text-decoration: none;
+    list-style: none;
 }
 .logo-recibo{
     display: none;
@@ -92,6 +93,12 @@ section{
     border: 5px solid #FBC02D; /* Opcional: para enxergar a div */
     padding: 10px;          /* Opcional */
 }
+.cliente{
+    margin-top: 20px;
+}
+.info{
+    display: none;
+}
 
 @page {
   size: 80mm auto;
@@ -112,15 +119,21 @@ section{
     top: 0;
     left: 0;
     width: 80mm;
+    height: 100mm;
     font-family: monospace;
-    font-size: 12px;
+    font-size: 8px;
   }
-   .logo-recibo {
+  .logo-recibo {
         width: 80px;
         display: block;
         margin: 0 auto;
     }
-
+  .info{
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    font-size: 8px;
+  }
   .linha {
     display: flex;
     justify-content: space-between;
