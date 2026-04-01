@@ -75,9 +75,19 @@ section{
     color: #fff;
     text-align: center;
 }
-
+.cpf{
+    display: flex;
+    text-align: left;
+}
+.cpf button{
+    margin-left: 20px;
+}
 .FormProd{
     text-align: left;
+    display: flex;
+}
+.FormProd button{
+    margin-left: 20px;
 }
 .FormProd, input{
     margin-bottom: 10px;
@@ -90,7 +100,7 @@ section{
     width: 300px;           /* Largura opcional */
     height: 200px;          /* ALTURA FIXA: Essencial para o scroll */
     overflow-y: auto;       /* Cria scroll vertical apenas quando necessário */
-    border: 5px solid #FBC02D; /* Opcional: para enxergar a div */
+    border: 5px solid rgb(95, 95, 86); /* Opcional: para enxergar a div */
     padding: 10px;          /* Opcional */
 }
 .cliente{
@@ -122,6 +132,7 @@ section{
     height: 100mm;
     font-family: monospace;
     font-size: 8px;
+    background-color: #fff;
   }
   .logo-recibo {
         width: 80px;
