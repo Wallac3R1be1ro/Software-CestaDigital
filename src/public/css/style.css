@@ -1,3 +1,8 @@
+/*Observação:
+- Geral (Significa que todas as páginas html utilizam esse atributo)
+- Nome da página (Significa que apenas essa página utiliza esses atributos, ex: index.html)*/
+
+/*Configuração de corpo da página - Geral*/
 *{
     box-sizing: border-box;
     padding: 0;
@@ -17,10 +22,32 @@ a, ul{
     text-decoration: none;
     list-style: none;
 }
+/*Configuração de impressão de recibo - atender-cliente.html*/
 .logo-recibo{
     display: none;
 }
-
+.area-impressao{
+    background-color: rgb(95, 95, 86);
+    color: #000;
+}
+.area-impressao{
+    width: 300px;           /* Largura opcional */
+    height: 200px;          /* ALTURA FIXA: Essencial para o scroll */
+    overflow-y: auto;       /* Cria scroll vertical apenas quando necessário */
+    border: 5px solid rgb(95, 95, 86); /* Opcional: para enxergar a div */
+    padding: 10px;          /* Opcional */
+}
+.cliente{
+    margin-top: 20px;
+}
+.info{
+    display: none;
+}
+@page {
+  size: 80mm auto;
+  margin: 5mm;
+}
+/*Estilo Botão - Geral*/
 button{
     background-color: #FBC02D;
     /*color: #102f5e;*/
@@ -46,13 +73,14 @@ button i{
     font-weight: bold;
     pointer-events: none;
 }
+/*Configuração da Section - Geral*/
 section{
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center;     /* Centraliza verticalmente */
     height: 90vh;           /*Altura opcional para alinhar na tela toda */
 }
-
+/*Configuração do Container - Geral*/
 .container{
     background-image: linear-gradient(rgba(0,0,0,0.8), rgba(255, 255, 255, 0.5)), url("../img/operador-caixa.jpg");
     background-size: cover;
@@ -64,7 +92,6 @@ section{
     height: 300px;          /* ALTURA FIXA: Essencial para o scroll */
     overflow-y: auto;  
 }
-
 .container header{
     padding: 0 1rem 1rem;
     margin-bottom: 20px;
@@ -75,6 +102,7 @@ section{
     color: #fff;
     text-align: center;
 }
+/*Configuração do formulário - atender-cliente.html*/
 .cpf{
     display: flex;
     text-align: left;
@@ -92,29 +120,7 @@ section{
 .FormProd, input{
     margin-bottom: 10px;
 }
-.area-impressao{
-    background-color: rgb(95, 95, 86);
-    color: #000;
-}
-.area-impressao{
-    width: 300px;           /* Largura opcional */
-    height: 200px;          /* ALTURA FIXA: Essencial para o scroll */
-    overflow-y: auto;       /* Cria scroll vertical apenas quando necessário */
-    border: 5px solid rgb(95, 95, 86); /* Opcional: para enxergar a div */
-    padding: 10px;          /* Opcional */
-}
-.cliente{
-    margin-top: 20px;
-}
-.info{
-    display: none;
-}
-
-@page {
-  size: 80mm auto;
-  margin: 5mm;
-}
-
+/*Configuração de exibição na tela de imprimir - atender-cliente.html*/
 @media print {
   body * {
     visibility: hidden;
