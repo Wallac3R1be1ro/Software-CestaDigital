@@ -13,7 +13,7 @@ const connection = mysql.createConnection({
   password: '',
   database: 'mercado'
 });
-// Conexão Código Produto
+
 app.get('/produto/:codigo', (req, res) => {
   const codigo = req.params.codigo;
 
@@ -31,7 +31,6 @@ app.get('/produto/:codigo', (req, res) => {
     }
   );
 });
-// Conexão Tabela Produtos
 app.get('/produtos', (req, res) => {
   connection.query(
     'SELECT * FROM produtos',
@@ -54,7 +53,6 @@ app.post('/produtos', (req, res) => {
     }
   );
 });
-// Conexão para excluir produtos
 app.delete('/produtos/:codigo', (req, res) => {
   const codigo = req.params.codigo;
 
@@ -68,7 +66,7 @@ app.delete('/produtos/:codigo', (req, res) => {
     }
   );
 });
-// Retorno de conexão com servidor
+
 app.listen(3000, () => {
   console.log('Servidor rodando em http://localhost:3000');
 });

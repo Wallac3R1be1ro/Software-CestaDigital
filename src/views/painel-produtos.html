@@ -15,10 +15,15 @@
             <nav>
                 <a href="../views/index.html"><button><i>Voltar</i></button></a>
             </nav>
-            <form class="produtos" method="get">
+            <ul id="lista"></ul>
 
-            </form>
+            <h2>Criar Produto</h2>
+            <input type="text" id="nome" placeholder="Nome">
+            <input type="number" id="preco" placeholder="Preço">
+            <input type="text" id="marca" placeholder="Marca">
+            <button onclick="criarProduto()">Adicionar</button>
         </div>
     </section>
+    <script src="../public/js/painel-produtos.js"></script>
 </body>
 </html>
