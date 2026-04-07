@@ -1,3 +1,4 @@
+// Esse script é responsável por exibir todos os produtos presentes no banco de dados na página "Painel de produtos"
 async function carregarProdutos() {
   try {
     const res = await fetch('http://localhost:3000/produtos');

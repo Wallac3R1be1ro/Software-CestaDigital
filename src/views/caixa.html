@@ -48,10 +48,12 @@
   <!--Link JS-->
   <script src="../public/js/func_cpf.js"></script>
   <script src="../public/js/cod_produto.js"></script>
+  <script src="../public/js/historico.js" ></script>
   <!--Script de função de imprimir-->
   <script>
     function imprimirRecibo(){
-    window.print();
+      salvarRecibo(); // salva antes de imprimir
+      window.print();
   }
   document.querySelector('#btnImprimir').addEventListener('click', imprimirRecibo);
   </script>
